@@ -9,6 +9,9 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     application
+
+    // Add the Spotless dependency
+    id("com.diffplug.spotless") version "6.25.0"
 }
 
 repositories {
@@ -27,6 +30,13 @@ dependencies {
 application {
     // Define the main class for the application.
     mainClass.set("leetcode.java.App")
+}
+
+spotless {
+    java {
+        googleJavaFormat().aosp()
+        formatAnnotations()
+    }
 }
 
 tasks.named<Test>("test") {
