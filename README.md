@@ -1,1 +1,1 @@
-# leetcode-java
+# My LeetCode journey
