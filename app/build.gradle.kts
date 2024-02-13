@@ -7,39 +7,45 @@
  */
 
 plugins {
-    // Apply the application plugin to add support for building a CLI application in Java.
-    application
-
-    // Add the Spotless dependency
+    java
+    jacoco
     id("com.diffplug.spotless") version "6.25.0"
 }
 
 repositories {
-    // Use Maven Central for resolving dependencies.
     mavenCentral()
 }
 
 dependencies {
-    // Use JUnit Jupiter for testing.
-    testImplementation("org.junit.jupiter:junit-jupiter:5.9.1")
-
-    // This dependency is used by the application.
-    implementation("com.google.guava:guava:31.1-jre")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.10.2")
 }
 
-application {
-    // Define the main class for the application.
-    mainClass.set("leetcode.java.App")
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(21))
+    }
 }
 
 spotless {
     java {
         googleJavaFormat().aosp()
-        formatAnnotations()
     }
 }
 
 tasks.named<Test>("test") {
-    // Use JUnit Platform for unit tests.
     useJUnitPlatform()
+}
+
+tasks.jacocoTestCoverageVerification {
+    violationRules {
+        rule {
+            limit {
+                minimum = "0.9".toBigDecimal()
+            }
+        }
+    }
+}
+
+tasks.check {
+    dependsOn(tasks.jacocoTestCoverageVerification)
 }
