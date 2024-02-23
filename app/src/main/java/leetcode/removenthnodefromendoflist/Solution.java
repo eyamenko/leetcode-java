@@ -1,32 +1,28 @@
 package leetcode.removenthnodefromendoflist;
 
+import java.util.ArrayList;
+
 /*
  * https://leetcode.com/problems/remove-nth-node-from-end-of-list/
  * Time complexity: O(n)
  * Space complexity: O(n)
  */
-public class Solution {
+class Solution {
     public ListNode removeNthFromEnd(ListNode head, int n) {
-        int size = remove(head, n) + 1;
+        var nodes = new ArrayList<ListNode>();
 
-        if (size == n) {
+        for (ListNode node = head; node != null; node = node.next) {
+            nodes.add(node);
+        }
+
+        if (n == nodes.size()) {
             return head.next;
         }
 
+        ListNode node = nodes.get(nodes.size() - n - 1);
+
+        node.next = node.next.next;
+
         return head;
-    }
-
-    private int remove(ListNode node, int n) {
-        if (node == null) {
-            return -1;
-        }
-
-        int index = remove(node.next, n) + 1;
-
-        if (index == n) {
-            node.next = node.next.next;
-        }
-
-        return index;
     }
 }

@@ -5,7 +5,7 @@ package leetcode.containerwithmostwater;
  * Time complexity: O(n)
  * Space complexity: O(1)
  */
-public class Solution {
+class Solution {
     public int maxArea(int[] height) {
         int maxArea = 0;
 

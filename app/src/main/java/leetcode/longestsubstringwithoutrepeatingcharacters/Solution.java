@@ -7,10 +7,10 @@ import java.util.HashSet;
  * Time complexity: O(n)
  * Space complexity: O(n)
  */
-public class Solution {
+class Solution {
     public int lengthOfLongestSubstring(String s) {
         int maxLength = 0;
-        HashSet<Character> characters = new HashSet<>(s.length());
+        var characters = new HashSet<Character>(s.length());
 
         for (int left = 0, right = 0; right < s.length(); right++) {
             if (characters.add(s.charAt(right))) {

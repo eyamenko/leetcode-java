@@ -9,9 +9,9 @@ import java.util.List;
  * Time complexity: O(n^2)
  * Space complexity: O(n)
  */
-public class Solution {
+class Solution {
     public List<List<Integer>> threeSum(int[] nums) {
-        List<List<Integer>> triplets = new ArrayList<List<Integer>>();
+        var triplets = new ArrayList<List<Integer>>();
 
         Arrays.sort(nums);
 
