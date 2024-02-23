@@ -5,3 +5,4 @@
 1. [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) - [Solution](app/src/main/java/leetcode/containerwithmostwater/Solution.java)
 1. [3Sum](https://leetcode.com/problems/3sum/) - [Solution](app/src/main/java/leetcode/threesum/Solution.java)
 1. [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) - [Solution](app/src/main/java/leetcode/removenthnodefromendoflist/Solution.java)
+1. [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) - [Solution](app/src/main/java/leetcode/validparentheses/Solution.java)
