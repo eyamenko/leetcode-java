@@ -1,6 +1,7 @@
 package leetcode.removenthnodefromendoflist;
 
 import java.util.ArrayList;
+import leetcode.ListNode;
 
 /*
  * https://leetcode.com/problems/remove-nth-node-from-end-of-list/
