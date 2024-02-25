@@ -7,3 +7,4 @@
 1. [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) - [Solution](app/src/main/java/leetcode/removenthnodefromendoflist/Solution.java)
 1. [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) - [Solution](app/src/main/java/leetcode/validparentheses/Solution.java)
 1. [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) - [Solution](app/src/main/java/leetcode/mergeksortedlists/Solution.java)
+1. [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) - [Solution](app/src/main/java/leetcode/searchinrotatedsortedarray/Solution.java)
