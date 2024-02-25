@@ -24,11 +24,8 @@ public class SolutionTests {
 
     static Stream<Arguments> testRemoveNthFromEnd() {
         return Stream.of(
-                arguments(
-                        new ListNode(new int[] {1, 2, 3, 4, 5}),
-                        2,
-                        new ListNode(new int[] {1, 2, 3, 5})),
+                arguments(new ListNode(1, 2, 3, 4, 5), 2, new ListNode(1, 2, 3, 5)),
                 arguments(new ListNode(1), 1, null),
-                arguments(new ListNode(new int[] {1, 2}), 1, new ListNode(1)));
+                arguments(new ListNode(1, 2), 1, new ListNode(1)));
     }
 }

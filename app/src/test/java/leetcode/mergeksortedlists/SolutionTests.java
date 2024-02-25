@@ -26,11 +26,9 @@ public class SolutionTests {
         return Stream.of(
                 arguments(
                         new ListNode[] {
-                            new ListNode(new int[] {1, 4, 5}),
-                            new ListNode(new int[] {1, 3, 4}),
-                            new ListNode(new int[] {2, 6})
+                            new ListNode(1, 4, 5), new ListNode(1, 3, 4), new ListNode(2, 6)
                         },
-                        new ListNode(new int[] {1, 1, 2, 3, 4, 4, 5, 6})),
+                        new ListNode(1, 1, 2, 3, 4, 4, 5, 6)),
                 arguments(new ListNode[0], null),
                 arguments(new ListNode[] {null}, null));
     }

@@ -6,27 +6,18 @@ public class ListNode {
     public int val;
     public ListNode next;
 
-    public ListNode(int val) {
-        this.val = val;
+    public ListNode(int... vals) {
+        this(vals, 0);
     }
 
-    public ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-
-    public ListNode(int[] vals, int i) {
-        this(vals[i]);
+    private ListNode(int[] vals, int i) {
+        this.val = vals[i];
 
         i++;
 
         if (i < vals.length) {
             this.next = new ListNode(vals, i);
         }
-    }
-
-    public ListNode(int[] vals) {
-        this(vals, 0);
     }
 
     @Override
