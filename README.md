@@ -10,3 +10,4 @@
 1. [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) - [Solution](app/src/main/java/leetcode/searchinrotatedsortedarray/Solution.java)
 1. [Group Anagrams](https://leetcode.com/problems/group-anagrams/) - [Solution](app/src/main/java/leetcode/groupanagrams/Solution.java)
 1. [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) - [Solution](app/src/main/java/leetcode/maximumsubarray/Solution.java)
+1. [Jump Game](https://leetcode.com/problems/jump-game/) - [Solution](app/src/main/java/leetcode/jumpgame/Solution.java)
