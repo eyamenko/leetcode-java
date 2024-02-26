@@ -9,16 +9,16 @@ import java.util.HashMap;
  */
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-        var diffs = new HashMap<Integer, Integer>(nums.length);
+        var indexes = new HashMap<Integer, Integer>(nums.length);
 
         for (int i = 0; i < nums.length; i++) {
-            int diff = target - nums[i];
+            Integer index = indexes.get(target - nums[i]);
 
-            if (diffs.containsKey(diff)) {
-                return new int[] {diffs.get(diff), i};
+            if (index != null) {
+                return new int[] {index, i};
             }
 
-            diffs.put(nums[i], i);
+            indexes.put(nums[i], i);
         }
 
         return new int[0];

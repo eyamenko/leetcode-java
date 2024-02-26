@@ -1,7 +1,6 @@
 package leetcode.validparentheses;
 
 import java.util.ArrayDeque;
-import java.util.Map;
 
 /*
  * https://leetcode.com/problems/valid-parentheses/
@@ -16,19 +15,22 @@ class Solution {
 
         var capacity = s.length() / 2;
         var stack = new ArrayDeque<Character>(capacity);
-        var parentheses = Map.of('}', '{', ']', '[', ')', '(');
 
         for (int i = 0; i < s.length(); i++) {
-            if (parentheses.containsKey(s.charAt(i))) {
-                if (stack.isEmpty() || parentheses.get(s.charAt(i)) != stack.pop()) {
-                    return false;
-                }
-            } else {
+            char bracket = s.charAt(i);
+
+            if (bracket == '{' || bracket == '[' || bracket == '(') {
                 if (stack.size() == capacity) {
                     return false;
                 }
-
-                stack.push(s.charAt(i));
+                stack.push(bracket);
+            } else {
+                if (stack.isEmpty()
+                        || (bracket == '}' && stack.pop() != '{')
+                        || (bracket == ']' && stack.pop() != '[')
+                        || (bracket == ')' && stack.pop() != '(')) {
+                    return false;
+                }
             }
         }
 
