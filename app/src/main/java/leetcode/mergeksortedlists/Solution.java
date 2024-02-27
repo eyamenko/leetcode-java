@@ -27,12 +27,20 @@ class Solution {
     }
 
     private ListNode merge(ListNode left, ListNode right) {
+        if (left == null) {
+            return right;
+        }
+
+        if (right == null) {
+            return left;
+        }
+
         ListNode head, tail;
         head = tail = null;
 
-        while (left != null || right != null) {
+        while (left != null && right != null) {
             ListNode node;
-            if (right == null || (left != null && left.val < right.val)) {
+            if (left.val < right.val) {
                 node = left;
                 left = left.next;
             } else {
@@ -45,6 +53,14 @@ class Solution {
             } else {
                 tail = tail.next = node;
             }
+        }
+
+        if (left != null) {
+            tail.next = left;
+        }
+
+        if (right != null) {
+            tail.next = right;
         }
 
         return head;
