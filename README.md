@@ -11,3 +11,4 @@
 1. [Group Anagrams](https://leetcode.com/problems/group-anagrams/) - [Solution](app/src/main/java/leetcode/groupanagrams/Solution.java)
 1. [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) - [Solution](app/src/main/java/leetcode/maximumsubarray/Solution.java)
 1. [Jump Game](https://leetcode.com/problems/jump-game/) - [Solution](app/src/main/java/leetcode/jumpgame/Solution.java)
+1. [Merge Intervals](https://leetcode.com/problems/merge-intervals/) - [Solution](app/src/main/java/leetcode/mergeintervals/Solution.java)
