@@ -9,61 +9,42 @@ import leetcode.ListNode;
  */
 class Solution {
     public ListNode mergeKLists(ListNode[] lists) {
-        return merge(lists, 0, lists.length);
-    }
-
-    private ListNode merge(ListNode[] lists, int start, int end) {
-        int length = end - start;
-
-        if (length == 0) {
+        if (lists.length == 0) {
             return null;
         }
 
-        if (length == 1) {
+        return mergeSort(lists, 0, lists.length - 1);
+    }
+
+    private ListNode mergeSort(ListNode[] lists, int start, int end) {
+        if (start == end) {
             return lists[start];
         }
 
         int mid = (start + end) / 2;
 
-        return merge(merge(lists, start, mid), merge(lists, mid, end));
+        return merge(mergeSort(lists, start, mid), mergeSort(lists, mid + 1, end));
     }
 
     private ListNode merge(ListNode left, ListNode right) {
-        if (left == null) {
-            return right;
-        }
-
-        if (right == null) {
-            return left;
-        }
-
         ListNode head, tail;
         head = tail = null;
 
-        while (left != null && right != null) {
-            if (left.val < right.val) {
-                if (head == null) {
-                    head = tail = left;
-                } else {
-                    tail = tail.next = left;
-                }
+        while (left != null || right != null) {
+            ListNode node;
+            if (right == null || (left != null && left.val < right.val)) {
+                node = left;
                 left = left.next;
             } else {
-                if (head == null) {
-                    head = tail = right;
-                } else {
-                    tail = tail.next = right;
-                }
+                node = right;
                 right = right.next;
             }
-        }
 
-        if (left == null) {
-            tail.next = right;
-        }
-
-        if (right == null) {
-            tail.next = left;
+            if (head == null) {
+                head = tail = node;
+            } else {
+                tail = tail.next = node;
+            }
         }
 
         return head;
