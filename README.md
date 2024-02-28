@@ -13,3 +13,4 @@
 1. [Jump Game](https://leetcode.com/problems/jump-game/) - [Solution](app/src/main/java/leetcode/jumpgame/Solution.java)
 1. [Merge Intervals](https://leetcode.com/problems/merge-intervals/) - [Solution](app/src/main/java/leetcode/mergeintervals/Solution.java)
 1. [Insert Interval](https://leetcode.com/problems/insert-interval/) - [Solution](app/src/main/java/leetcode/insertinterval/Solution.java)
+1. [Unique Paths](https://leetcode.com/problems/unique-paths/) - [Solution](app/src/main/java/leetcode/uniquepaths/Solution.java)
