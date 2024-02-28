@@ -10,13 +10,11 @@ public class ListNode {
         this(vals, 0);
     }
 
-    private ListNode(int[] vals, int i) {
-        this.val = vals[i];
+    private ListNode(int[] vals, int index) {
+        this.val = vals[index];
 
-        i++;
-
-        if (i < vals.length) {
-            this.next = new ListNode(vals, i);
+        if (++index < vals.length) {
+            this.next = new ListNode(vals, index);
         }
     }
 

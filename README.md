@@ -12,3 +12,4 @@
 1. [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) - [Solution](app/src/main/java/leetcode/maximumsubarray/Solution.java)
 1. [Jump Game](https://leetcode.com/problems/jump-game/) - [Solution](app/src/main/java/leetcode/jumpgame/Solution.java)
 1. [Merge Intervals](https://leetcode.com/problems/merge-intervals/) - [Solution](app/src/main/java/leetcode/mergeintervals/Solution.java)
+1. [Insert Interval](https://leetcode.com/problems/insert-interval/) - [Solution](app/src/main/java/leetcode/insertinterval/Solution.java)

@@ -23,8 +23,8 @@ class Solution {
     }
 
     private int[][] merge(int[][] left, int[][] right) {
-        int i = -1;
-        int[][] intervals = new int[left.length + right.length][];
+        int index = -1;
+        int[][] merged = new int[left.length + right.length][];
 
         for (int l = 0, r = 0; l < left.length || r < right.length; ) {
             int[] interval;
@@ -36,16 +36,15 @@ class Solution {
                 r++;
             }
 
-            if (i == -1 || intervals[i][1] < interval[0]) {
-                i++;
-                intervals[i] = interval;
+            if (index == -1 || merged[index][1] < interval[0]) {
+                merged[++index] = interval;
             } else {
-                intervals[i][1] = Math.max(intervals[i][1], interval[1]);
+                merged[index][1] = Math.max(merged[index][1], interval[1]);
             }
         }
 
-        int newLength = i + 1;
+        int newLength = index + 1;
 
-        return newLength == intervals.length ? intervals : Arrays.copyOf(intervals, newLength);
+        return newLength == merged.length ? merged : Arrays.copyOf(merged, newLength);
     }
 }

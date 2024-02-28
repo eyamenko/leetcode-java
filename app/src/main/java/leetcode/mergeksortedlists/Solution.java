@@ -35,8 +35,8 @@ class Solution {
             return left;
         }
 
-        ListNode head, tail;
-        head = tail = null;
+        ListNode head = null;
+        ListNode tail = null;
 
         while (left != null && right != null) {
             ListNode node;
