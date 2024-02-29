@@ -5,12 +5,12 @@ import java.util.HashSet;
 /*
  * https://leetcode.com/problems/longest-substring-without-repeating-characters/
  * Time complexity: O(n)
- * Space complexity: O(n)
+ * Space complexity: O(1)
  */
 class Solution {
     public int lengthOfLongestSubstring(String s) {
         int maxLength = 0;
-        var characters = new HashSet<Character>(s.length());
+        var characters = new HashSet<Character>();
 
         for (int left = 0, right = 0; right < s.length(); right++) {
             if (characters.add(s.charAt(right))) {

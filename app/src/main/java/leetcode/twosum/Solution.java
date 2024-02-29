@@ -9,7 +9,7 @@ import java.util.HashMap;
  */
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-        var indexes = new HashMap<Integer, Integer>(nums.length);
+        var indexes = HashMap.<Integer, Integer>newHashMap(nums.length);
 
         for (int i = 0; i < nums.length; i++) {
             Integer index = indexes.get(target - nums[i]);

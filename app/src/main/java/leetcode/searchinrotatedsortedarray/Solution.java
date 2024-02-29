@@ -17,8 +17,8 @@ class Solution {
             int prev = mid - 1;
             int next = mid + 1;
 
-            if ((sorted(nums, start, prev) && contains(nums, target, start, prev))
-                    || (sorted(nums, next, end) && !contains(nums, target, next, end))) {
+            if ((isSorted(nums, start, prev) && contains(nums, target, start, prev))
+                    || (isSorted(nums, next, end) && !contains(nums, target, next, end))) {
                 end = prev;
             } else {
                 start = next;
@@ -28,7 +28,7 @@ class Solution {
         return -1;
     }
 
-    private boolean sorted(int[] nums, int start, int end) {
+    private boolean isSorted(int[] nums, int start, int end) {
         return start >= 0 && end < nums.length && start <= end && nums[start] <= nums[end];
     }
 
