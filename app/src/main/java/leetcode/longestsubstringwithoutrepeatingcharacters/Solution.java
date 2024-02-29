@@ -9,6 +9,10 @@ import java.util.HashSet;
  */
 class Solution {
     public int lengthOfLongestSubstring(String s) {
+        if (s.length() < 2) {
+            return s.length();
+        }
+
         int maxLength = 0;
         var characters = new HashSet<Character>();
 

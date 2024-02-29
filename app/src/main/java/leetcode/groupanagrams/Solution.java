@@ -11,6 +11,10 @@ import java.util.List;
  */
 class Solution {
     public List<List<String>> groupAnagrams(String[] strs) {
+        if (strs.length == 1) {
+            return List.of(List.of(strs[0]));
+        }
+
         var anagrams = new HashMap<String, List<String>>();
 
         for (String str : strs) {

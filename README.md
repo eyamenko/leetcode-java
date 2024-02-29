@@ -16,3 +16,4 @@
 1. [Unique Paths](https://leetcode.com/problems/unique-paths/) - [Solution](app/src/main/java/leetcode/uniquepaths/Solution.java)
 1. [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) - [Solution](app/src/main/java/leetcode/climbingstairs/Solution.java)
 1. [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) - [Solution](app/src/main/java/leetcode/minimumwindowsubstring/Solution.java)
+1. [Decode Ways](https://leetcode.com/problems/decode-ways/) - [Solution](app/src/main/java/leetcode/decodeways/Solution.java)
