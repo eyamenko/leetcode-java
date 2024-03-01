@@ -19,3 +19,4 @@
 1. [Decode Ways](https://leetcode.com/problems/decode-ways/) - [Solution](app/src/main/java/leetcode/decodeways/Solution.java)
 1. [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) - [Solution](app/src/main/java/leetcode/validatebinarysearchtree/Solution.java)
 1. [Same Tree](https://leetcode.com/problems/same-tree/) - [Solution](app/src/main/java/leetcode/sametree/Solution.java)
+1. [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) - [Solution](app/src/main/java/leetcode/binarytreelevelordertraversal/Solution.java)
