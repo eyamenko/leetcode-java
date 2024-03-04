@@ -9,14 +9,10 @@ import leetcode.TreeNode;
  */
 class Solution {
     public int maxDepth(TreeNode root) {
-        return maxDepth(root, 0);
-    }
-
-    private int maxDepth(TreeNode node, int level) {
-        if (node == null) {
-            return level;
+        if (root == null) {
+            return 0;
         }
 
-        return Math.max(maxDepth(node.left, level + 1), maxDepth(node.right, level + 1));
+        return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
     }
 }
