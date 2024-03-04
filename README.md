@@ -20,3 +20,4 @@
 1. [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) - [Solution](app/src/main/java/leetcode/validatebinarysearchtree/Solution.java)
 1. [Same Tree](https://leetcode.com/problems/same-tree/) - [Solution](app/src/main/java/leetcode/sametree/Solution.java)
 1. [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) - [Solution](app/src/main/java/leetcode/binarytreelevelordertraversal/Solution.java)
+1. [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) - [Solution](app/src/main/java/leetcode/maximumdepthofbinarytree/Solution.java)

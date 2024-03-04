@@ -4,8 +4,8 @@ import leetcode.TreeNode;
 
 /*
  * https://leetcode.com/problems/same-tree/
- * Time complexity: O(1)
- * Space complexity: O(1)
+ * Time complexity: O(n)
+ * Space complexity: O(n)
  */
 class Solution {
     public boolean isSameTree(TreeNode p, TreeNode q) {

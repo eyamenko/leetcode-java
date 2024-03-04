@@ -6,8 +6,8 @@ import leetcode.TreeNode;
 
 /*
  * https://leetcode.com/problems/binary-tree-level-order-traversal/
- * Time complexity: O(1)
- * Space complexity: O(1)
+ * Time complexity: O(n)
+ * Space complexity: O(n)
  */
 class Solution {
     public List<List<Integer>> levelOrder(TreeNode root) {
