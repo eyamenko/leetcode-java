@@ -1,5 +1,7 @@
 package leetcode;
 
+import java.util.Objects;
+
 public class TreeNode {
     public int val;
     public TreeNode left;
@@ -22,5 +24,19 @@ public class TreeNode {
         if (rightIndex < vals.length && vals[rightIndex] != null) {
             this.right = new TreeNode(vals, rightIndex);
         }
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return obj != null
+                && obj instanceof TreeNode node
+                && val == node.val
+                && Objects.equals(left, node.left)
+                && Objects.equals(right, node.right);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(val, left, right);
     }
 }

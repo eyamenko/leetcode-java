@@ -21,3 +21,4 @@
 1. [Same Tree](https://leetcode.com/problems/same-tree/) - [Solution](app/src/main/java/leetcode/sametree/Solution.java)
 1. [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/) - [Solution](app/src/main/java/leetcode/binarytreelevelordertraversal/Solution.java)
 1. [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) - [Solution](app/src/main/java/leetcode/maximumdepthofbinarytree/Solution.java)
+1. [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/) - [Solution](app/src/main/java/leetcode/constructbinarytreefrompreorderandinordertraversal/Solution.java)
