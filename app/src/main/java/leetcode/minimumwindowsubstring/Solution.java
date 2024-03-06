@@ -1,8 +1,5 @@
 package leetcode.minimumwindowsubstring;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /*
  * https://leetcode.com/problems/minimum-window-substring/
  * Time complexity: O(m+n)
@@ -14,27 +11,46 @@ class Solution {
             return new String();
         }
 
-        int windowStart = 0;
-        int windowLength = 0;
-        var sChars = new HashMap<Character, Integer>();
-        var tChars = new HashMap<Character, Integer>();
+        int windowStart, windowLength, sCount, tCount;
+        windowStart = windowLength = sCount = tCount = 0;
+
+        int[] sChars = new int[58];
+        int[] tChars = new int[58];
 
         for (int i = 0; i < t.length(); i++) {
-            tChars.merge(t.charAt(i), 1, Integer::sum);
+            int charIndex = t.charAt(i) - 'A';
+
+            tChars[charIndex]++;
+
+            if (tChars[charIndex] == 1) {
+                tCount++;
+            }
         }
 
         for (int left = 0, right = 0; right < s.length(); right++) {
-            sChars.merge(s.charAt(right), 1, Integer::sum);
+            int charIndex = s.charAt(right) - 'A';
 
-            while (isIncluded(sChars, tChars)) {
-                windowLength = right - left + 1;
-                windowStart = left;
-                sChars.merge(s.charAt(left), -1, Integer::sum);
-                left++;
+            if (tChars[charIndex] > 0) {
+                sChars[charIndex]++;
+
+                if (sChars[charIndex] == tChars[charIndex]) {
+                    sCount++;
+                }
+
+                while (sCount == tCount) {
+                    if (isNoLongerIncluded(s, left, sChars, tChars)) {
+                        sCount--;
+                    }
+                    windowLength = right - left + 1;
+                    windowStart = left;
+                    left++;
+                }
             }
 
             if (left < s.length() && windowLength > 0) {
-                sChars.merge(s.charAt(left), -1, Integer::sum);
+                if (isNoLongerIncluded(s, left, sChars, tChars)) {
+                    sCount--;
+                }
                 left++;
             }
         }
@@ -42,15 +58,15 @@ class Solution {
         return s.substring(windowStart, windowStart + windowLength);
     }
 
-    private boolean isIncluded(Map<Character, Integer> sChars, Map<Character, Integer> tChars) {
-        for (Map.Entry<Character, Integer> entry : tChars.entrySet()) {
-            Integer count = sChars.get(entry.getKey());
+    private boolean isNoLongerIncluded(String s, int left, int[] sChars, int[] tChars) {
+        boolean isNoLongerIncluded = false;
+        int charIndex = s.charAt(left) - 'A';
 
-            if (count == null || count < entry.getValue()) {
-                return false;
-            }
+        if (tChars[charIndex] > 0) {
+            isNoLongerIncluded = sChars[charIndex] == tChars[charIndex];
+            sChars[charIndex]--;
         }
 
-        return true;
+        return isNoLongerIncluded;
     }
 }
